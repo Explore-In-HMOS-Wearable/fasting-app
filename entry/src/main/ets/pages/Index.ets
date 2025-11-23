@@ -1,6 +1,7 @@
 import preferences from '@ohos.data.preferences';
 import notificationManager from '@ohos.notificationManager';
 import promptAction from '@ohos.promptAction';
+import common from '@ohos.app.ability.common'
 
 const PREF_NAME = 'fastingApp';
 const NOTIFICATION_ID = 1001;
@@ -34,12 +35,12 @@ struct Index {
 
   // --------- Motivation Sentences ---------
   private motivationalQuotes: string[] = [
-    "Stay strong, you're doing great!",
-    "Drink some water and keep going!",
-    "Every second counts towards your health!",
-    "Discipline equals freedom!",
-    "One step at a time.",
-    "Focus on the process,\n not the outcome."
+    'Stay strong,you doing great!',
+    'Drink some water and keep going!',
+    'Every second counts towards your health!',
+    'Discipline equals freedom!',
+    'One step at a time.',
+    'Focus on the process,\n not the outcome.'
   ]
   @State currentQuote: string = ''
 
@@ -684,7 +685,7 @@ struct Index {
   // ---------- Persistence ----------
   async saveFastingData() {
     try {
-      const ctx = getContext(this)
+      const ctx = this.getUIContext().getHostContext() as Context
       const pref = await preferences.getPreferences(ctx, PREF_NAME)
       await pref.put('fastingStart', this.fastingStart)
       await pref.put('fastingEnd', this.fastingEnd)
@@ -710,7 +711,7 @@ struct Index {
 
   async loadFastingData() {
     try {
-      const ctx = getContext(this)
+      const ctx = this.getUIContext().getHostContext() as Context
       const pref = await preferences.getPreferences(ctx, PREF_NAME)
 
       this.fastingStart = Number(await pref.get('fastingStart', 0))
