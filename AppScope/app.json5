@@ -1,6 +1,6 @@
 {
   "app": {
-    "bundleName": "com.hmosdemos.fasting",
+    "bundleName": "com.hmosdemos.wearable.fasting",
     "vendor": "hmosdemos",
     "versionCode": 1000000,
     "versionName": "1.0.0",

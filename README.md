@@ -6,10 +6,9 @@
 
 # Preview
 <div>
-    <img src="screenshot/ss3.png" width="24%"> 
-    <img src="screenshot/ss5.png" width="24%"> 
-    <img src="screenshot/ss6.png" width="24%"> 
-    <img src="screenshot/ss2.png" width="24%">
+
+<img src="screenshots/ss3.png" width="24%"> <img src="screenshots/ss5.png" width="24%"> <img src="screenshots/ss6.png" width="24%"> <img src="screenshots/ss2.png" width="24%">
+
 </div>
 
 # Use Cases
